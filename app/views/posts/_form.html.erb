@@ -1,4 +1,6 @@
 <%= form_for @post, :url => posts_path, :html => { :multipart => true } do |post| %>
+	<%= post.label :image %>
   <%= post.file_field :image %>
   <%= post.text_area :content, placeholder: 'Write a description.', class: 'form-control' %>
+  <%= post.submit "Post" %>
 <% end %>
