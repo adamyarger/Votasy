@@ -6,6 +6,7 @@ feature 'user registers an account' do
 	scenario 'successfully' do
 		visit '/users/sign_up'
 
+		fill_in 'Name',										:with => 'Steven Glansbury'
 		fill_in 'Email',									:with => 'person@example.com'
 		fill_in 'Password', 							:with => 'password'
 		fill_in 'Password confirmation',	:with => 'password'
