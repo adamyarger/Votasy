@@ -1,5 +1,7 @@
 require 'rails_helper'
 
+# come bak later to test deifferent cenarios of register
+
 feature 'user registers an account' do
 	scenario 'successfully' do
 		visit '/users/sign_up'

@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem "devise"
 # gem "auto_html"
 gem 'faker'
+gem "paperclip", "~> 4.3"
 
 # design
 gem "font-awesome-rails"
