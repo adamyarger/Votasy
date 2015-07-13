@@ -5,7 +5,6 @@ describe Post do
 	it { should validate_presence_of(:user_id) }
 
 	# paperclip matchers
-	# it { should have_attached_presence(:image) }
 	it { should validate_attachment_content_type(:image).
 								allowing('image/png', 'image/gif').
 								rejecting('text/plain', 'text/xml') }
