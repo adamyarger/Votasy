@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+	before_action :authenticate_user!, only: [:create, :new]
+
 	def index
 		@posts = Post.all
 	end
@@ -13,6 +15,10 @@ class PostsController < ApplicationController
 			flash[:error] = 'Something went wrong'
 			redirect_to root_path
 		end
+	end
+
+	def new
+		@post = Post.new
 	end
 
 	def show

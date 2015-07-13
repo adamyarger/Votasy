@@ -2,7 +2,6 @@ require 'rails_helper'
 
 describe PostsController, type: :controller do
 	
-
 	describe 'POST #create' do
     context 'with valid attributes' do
 			before(:each) do
