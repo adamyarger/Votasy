@@ -1,4 +1,5 @@
 <% @posts.each do |post| %>
 	<%= post.content %>
-	<%= image_tag post.image.url(:medium) %>
+	<%= image_tag(post.image.url(:medium)) %>
+	<%= image_tag(post.user.avatar.url(:thumb)) %>
 <% end %>
