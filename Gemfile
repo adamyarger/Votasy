@@ -20,6 +20,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'refills'
 gem "normalize-rails"
+gem 'masonry-rails'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 
