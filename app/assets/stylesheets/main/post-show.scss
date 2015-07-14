@@ -1,0 +1,52 @@
+.bigbox {
+  @include outer-container;
+}
+
+.box {
+  @include span-columns(12);
+  /*@include shift(3);*/
+  margin: 0;
+  background: $white;
+  border-radius: 0;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .posts-avatar {
+    float: left;
+    margin-right: 13px;
+
+    img {
+      width: 35px;
+      border-radius: 50%;
+    }
+  }
+
+  .posts-body {
+    padding: 5px 10px 20px 10px;
+    text-align: left;
+  }
+
+  .posts-content {
+    @include font-size(13px);
+    color: darken($border, 25%);
+    margin-bottom: 12px;
+    text-align: left;
+  }
+
+  .posts-name {
+    @include font-size(14px);
+    color: $color-3;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .posts-tags {
+    @include font-size(13px);
+    color: darken($border, 25%);
+    text-align: left;
+  }
+}
