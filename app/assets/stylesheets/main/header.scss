@@ -32,11 +32,11 @@ Header
     $search-bar-border: 1px solid $search-bar-border-color;
     $search-bar-background: lighten($search-bar-border-color, 10%);
 
-		  margin-top: 10px;
-		  width: 100%;
-		  position: absolute;
-		  margin-left: 59px;
-	    padding-right: 170px;
+	  margin-top: 10px;
+	  width: 100%;
+	  position: absolute;
+	  margin-left: 59px;
+    padding-right: 170px;
 
     form {
       position: relative;
@@ -86,7 +86,15 @@ Header
 	  right: 0;
 	  top: 0;
   }
+
+  @include MQ(M) {
+		.search-bar {
+			padding-right: 250px;
+		}
+	}
 }
+
+
 
 	/* end left side divs */
 
