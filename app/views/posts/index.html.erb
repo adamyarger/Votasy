@@ -6,7 +6,10 @@
 				<p class="posts-content"><%= post.content %></p>
 				<p>
 					<span class="posts-avatar"><%= image_tag(post.user.avatar.url(:thumb)) %></span>
-					<span><%= post.user.name %></span>
+					<span class="posts-name">
+						<%= post.user.name %>
+						<p class="posts-tags">tags</p>
+					</span>
 				</p>
 			</div>
 		</div>
