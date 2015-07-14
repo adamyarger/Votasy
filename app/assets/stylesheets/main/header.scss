@@ -30,7 +30,7 @@ Header
 		height: $header-height-M;
 
 		#logo {
-			margin: 23px 0 0 5%;
+			margin: 15px 0 0 1%;
 		}
 
 		// Search bar
@@ -41,7 +41,8 @@ Header
 		    $search-bar-background: lighten($search-bar-border-color, 10%);
 
 		    float: left;
-		    padding: 0.85em 0.85em 0.7em 0.6em;
+		    margin-top: 19px;
+  			margin-left: 16px;
 		    width: 60%;
 
 		    form {
