@@ -1,33 +1,28 @@
-/*#masonry-container {
+#masonry-container {
   margin: 0 auto;
   width: 100%;
 
   .posts-container {
     margin: 10px;
     width: 350px;
+    background: $white;
     border-radius: 4px;
     text-align: center;
 
     img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
     }
-  }
-}*/
 
-#masonry-container {
-  background: #FFF;
-  padding: 5px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  clear: both;
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
+    .posts-avatar {
+      img {
+        width: 35px;
+        border-radius: 50%;
+      }
+    }
+  }
 }
 
-.clearfix:before, .clearfix:after { content: ""; display: table; }
-.clearfix:after { clear: both; }
-.clearfix { zoom: 1; }
+
 
 

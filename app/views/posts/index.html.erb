@@ -5,7 +5,7 @@
 			<div class="posts-body">
 				<p class="posts-content"><%= post.content %></p>
 				<p>
-					<span><%= image_tag(post.user.avatar.url(:thumb)) %></span>
+					<span class="posts-avatar"><%= image_tag(post.user.avatar.url(:thumb)) %></span>
 					<span><%= post.user.name %></span>
 				</p>
 			</div>
