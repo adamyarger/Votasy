@@ -145,7 +145,7 @@ Header
 			position: static;
 			width: auto;
 			@include transform(translateY(0));
-			line-height: $header-height-M;
+			line-height: $header-height-S;
 
 			&.is-visible {
 				@include transform(translateY(0));
