@@ -13,4 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require modernizr
+//= require header
 //= require_tree .
+
+

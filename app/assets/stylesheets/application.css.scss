@@ -10,6 +10,16 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  */
+
+ @import 'reset';
+ @import 'bourbon';
+ @import 'neat';
+ @import 'base/variables';
+ @import 'base/mixins';
+ @import 'base/layout';
+ @import 'main/primary';
+ @import 'modules/modules';
+ @import 'main/header';
+

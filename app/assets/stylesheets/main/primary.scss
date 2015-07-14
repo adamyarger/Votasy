@@ -1,0 +1,27 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+
+html * {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+body {
+	font: {
+		size: 100%;
+		family: $primary-font;
+	}
+	color: $color-3;
+	background-color: background;
+}
+
+a {
+	text-decoration: none;
+}

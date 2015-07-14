@@ -1,18 +1,18 @@
-<header>
+<header class="header">
 	<div id="logo"><%= link_to "logo", root_path %></div>
 		
 	<nav class="main-nav">
 		<ul>
-			<li>search bar</li>
-			<li>profile image</li>
-			<li>user name</li>
-			<li>notification icon</li>
+			<li><a href="#0">search</a></li>
+			<li><a href="#0">avatar</a></li>
+			<li><a href="#0">name/view</a></li>
+			<li><a href="#0">bell</a></li>
 			<% if user_signed_in? %>
-        <li class="nav-link"><%= link_to "New", new_post_path %></li>
-        <li class="nav-link"><%= link_to "Log out", destroy_user_session_path, method: "delete" %></li>
+        <li><%= link_to "New", new_post_path %></li>
+        <li><%= link_to "Logout", destroy_user_session_path, method: "delete" %></li>
       <% else %>
-        <li class="nav-link"><%= link_to "Sign In", new_user_session_path %></li>
-        <li class="nav-link"><%= link_to "Register", new_user_registration_path %></li>
+        <li><%= link_to "SignIn", new_user_session_path %></li>
+        <li><%= link_to "Register", new_user_registration_path %></li>
       <% end %>
 		</ul>
 	</nav>

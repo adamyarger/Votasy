@@ -1,0 +1,9 @@
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+
+.container {
+	@include outer-container(100%);
+}
