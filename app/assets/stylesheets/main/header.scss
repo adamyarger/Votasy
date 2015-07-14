@@ -72,16 +72,6 @@ Header
       }
     }
   }
-
-	@include MQ(M) {
-		height: $header-height-M;
-
-		#logo {
-			margin: 15px 0 0 1%;
-		}
-
-		// Search bar -- need to put form styling in partial
-	}
 }
 
 	/* end left side divs */
@@ -89,11 +79,12 @@ Header
 
 .main-nav {
 	float: right;
-	margin-right: 5%;
+	margin-right: 0;
 	width: 44px;
 	height: 100%;
 	background: url('bell.svg') no-repeat center center;
-	background-size: 44px 44px;
+	background-size: 22px 22px;
+	background-color: red; 
 	cursor: pointer;
 
 	ul {
