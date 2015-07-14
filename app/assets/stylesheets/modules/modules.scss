@@ -7,3 +7,16 @@ Modules - reusable parts of our design
 .container {
 	@include outer-container(100%);
 }
+
+.nav-avatar {
+  width: 40px;
+  position: absolute;
+  right: 56px;
+  top: 5px;
+
+	img {
+		width: 40px;
+		border-radius: 50%;
+		@include clearfix;
+	}
+}

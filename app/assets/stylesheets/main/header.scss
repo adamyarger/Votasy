@@ -16,8 +16,9 @@ Header
 	@include clearfix;
 
 	#logo {
-		float: left;
-		margin: 5px 0 0 1%;
+	  float: left;
+	  margin: 5px 0 0 1%;
+	  position: absolute;
 
 		a {
 			diaplay: block;
@@ -31,10 +32,11 @@ Header
     $search-bar-border: 1px solid $search-bar-border-color;
     $search-bar-background: lighten($search-bar-border-color, 10%);
 
-    float: left;
-    margin-top: 10px;
-		margin-left: 16px;
-    width: 60%;
+		  margin-top: 10px;
+		  width: 100%;
+		  position: absolute;
+		  margin-left: 59px;
+		  padding-right: 196px;
 
     form {
       position: relative;
@@ -72,20 +74,25 @@ Header
       }
     }
   }
+
+  .nav-bell {
+	  width: 50px;
+	  height: 100%;
+	  background: url("bell.svg") no-repeat center center;
+	  background-size: 22px 22px;
+	  background-color: red;
+	  cursor: pointer;
+	  position: absolute;
+	  right: 0;
+	  top: 0;
+  }
 }
 
 	/* end left side divs */
 
 
 .main-nav {
-	float: right;
-	margin-right: 0;
-	width: 44px;
-	height: 100%;
-	background: url('bell.svg') no-repeat center center;
-	background-size: 22px 22px;
-	background-color: red; 
-	cursor: pointer;
+	
 
 	ul {
 		position: absolute;

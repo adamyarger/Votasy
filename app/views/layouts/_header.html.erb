@@ -11,6 +11,13 @@
       </div>
     </div>
   </div>
+
+  <div class="nav-avatar">
+    <span><%= image_tag(current_user.avatar.url(:thumb)) %></span>
+  </div>
+
+  <div class="nav-bell"></div>
+</header>
 		
 	<nav class="main-nav">
 		<ul>
@@ -23,4 +30,3 @@
       <% end %>
 		</ul>
 	</nav>
-</header>
