@@ -87,9 +87,20 @@ Header
 	  top: 0;
   }
 
+  .nav-name {
+  	display: none;
+  }
+
   @include MQ(M) {
 		.search-bar {
 			padding-right: 250px;
+		}
+
+		.nav-name {
+			  display: inline-block;
+			  position: absolute;
+			  top: 2px;
+			  margin-left: 16px;
 		}
 	}
 }

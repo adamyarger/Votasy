@@ -8,15 +8,20 @@ Modules - reusable parts of our design
 	@include outer-container(100%);
 }
 
-.nav-avatar {
-  width: 40px;
+.nav-user-group {
+  width: 45px;
   position: absolute;
   right: 56px;
   top: 5px;
+  cursor: pointer;
 
 	img {
 		width: 40px;
 		border-radius: 50%;
 		@include clearfix;
+	}
+
+	@include MQ(M) {
+		width: 120px;
 	}
 }

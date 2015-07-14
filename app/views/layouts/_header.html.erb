@@ -12,9 +12,9 @@
     </div>
   </div>
 
-  <div class="nav-avatar">
-    <span><%= image_tag(current_user.avatar.url(:thumb)) %></span>
-    <%= current_user.name %>
+  <div class="nav-user-group">
+    <span class="nav-avatar"><%= image_tag(current_user.avatar.url(:thumb)) %></span>
+    <span class="nav-name"><%= current_user.name %></span>
   </div>
 
   <div class="nav-bell"></div>
