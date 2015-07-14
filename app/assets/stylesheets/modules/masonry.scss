@@ -1,6 +1,7 @@
 #masonry-container {
   margin: 0 auto;
   width: 100%;
+  z-index: index($elements, posts);
 
   .posts-container {
     margin: 10px;

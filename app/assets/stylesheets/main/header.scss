@@ -105,15 +105,13 @@ Header
 	}
 }
 
-
-
 	/* end left side divs */
 
 
 .main-nav {
 	
-
 	ul {
+		z-index: index($elements, navigation);
 		position: absolute;
 		padding-left: 0;
 		margin-top: 0;
