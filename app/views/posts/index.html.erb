@@ -1,7 +1,7 @@
 <div id="masonry-container" class="transitions-enabled">
 	<% @posts.each do |post| %>
 		<div class="posts-container">
-			<%= image_tag(post.image.url(:medium)) %>
+			<%= link_to (image_tag(post.image.url)), post %>
 			<div class="posts-body">
 				<p class="posts-content"><%= post.content %></p>
 				<p>
