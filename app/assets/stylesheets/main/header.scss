@@ -17,7 +17,7 @@ Header
 
 	#logo {
 		float: left;
-		margin: 13px 0 0 5%;
+		margin: 5px 0 0 1%;
 
 		a {
 			diaplay: block;
@@ -26,6 +26,53 @@ Header
 		}
 	}
 
+	.search-bar {
+    $search-bar-border-color: $color-3;
+    $search-bar-border: 1px solid $search-bar-border-color;
+    $search-bar-background: lighten($search-bar-border-color, 10%);
+
+    float: left;
+    margin-top: 10px;
+		margin-left: 16px;
+    width: 60%;
+
+    form {
+      position: relative;
+
+      input[type=search] {
+        @include box-sizing(border-box);
+        background: $background;
+        border-radius: 4px;
+        border: 4px;
+        color: $color-1;
+        font-size: 0.9em;
+        margin: 0;
+        padding: 0.5em 0.8em;
+        width: 100%;
+
+        
+      }
+
+      button[type=submit] {
+        background: $background;
+        border: none;
+        bottom: 0.3em;
+        left: auto;
+        outline: none;
+        padding: 0 9px;
+        position: absolute;
+        right: 0.3em;
+        top: 0.3em;
+
+        img {
+          height: 12px;
+          opacity: 0.7;
+          padding: 1px;
+        }
+      }
+    }
+  }
+
 	@include MQ(M) {
 		height: $header-height-M;
 
@@ -33,57 +80,11 @@ Header
 			margin: 15px 0 0 1%;
 		}
 
-		// Search bar
-
-		  .search-bar {
-		    $search-bar-border-color: $color-3;
-		    $search-bar-border: 1px solid $search-bar-border-color;
-		    $search-bar-background: lighten($search-bar-border-color, 10%);
-
-		    float: left;
-		    margin-top: 19px;
-  			margin-left: 16px;
-		    width: 60%;
-
-		    form {
-		      position: relative;
-
-		      input[type=search] {
-		        @include box-sizing(border-box);
-		        background: $background;
-		        border-radius: 4px;
-		        border: 4px;
-		        color: $color-1;
-		        font-size: 0.9em;
-		        font-style: italic;
-		        margin: 0;
-		        padding: 0.5em 0.8em;
-		        width: 100%;
-
-		        
-		      }
-
-		      button[type=submit] {
-		        background: $background;
-		        border: none;
-		        bottom: 0.3em;
-		        left: auto;
-		        outline: none;
-		        padding: 0 9px;
-		        position: absolute;
-		        right: 0.3em;
-		        top: 0.3em;
-
-		        img {
-		          height: 12px;
-		          opacity: 0.7;
-		          padding: 1px;
-		        }
-		      }
-		    }
-		  }
-		}
+		// Search bar -- need to put form styling in partial
 	}
+}
+
+	/* end left side divs */
 
 
 .main-nav {
@@ -91,7 +92,7 @@ Header
 	margin-right: 5%;
 	width: 44px;
 	height: 100%;
-	background: url('cd-icon-menu.svg') no-repeat center center;
+	background: url('bell.svg') no-repeat center center;
 	background-size: 44px 44px;
 	cursor: pointer;
 

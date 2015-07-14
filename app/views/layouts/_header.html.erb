@@ -3,7 +3,7 @@
 	<div class="navigation-tools">
       <div class="search-bar">
         <form role="search">
-          <input type="search" placeholder="Enter Search" />
+          <input type="search" placeholder="Search Stuff" />
           <button type="submit">
             <%= image_tag('search.svg') %>
           </button>
@@ -14,7 +14,6 @@
 		
 	<nav class="main-nav">
 		<ul>
-
 			<% if user_signed_in? %>
         <li><%= link_to "New", new_post_path %></li>
         <li><%= link_to "Logout", destroy_user_session_path, method: "delete" %></li>
