@@ -80,7 +80,7 @@ Header
 	  height: 100%;
 	  background: url("bell.svg") no-repeat center center;
 	  background-size: 22px 22px;
-	  background-color: red;
+	  background-color: $background;
 	  cursor: pointer;
 	  position: absolute;
 	  right: 0;
@@ -134,7 +134,7 @@ Header
 		padding-left: 5%;
 		background: $background;
 		border-top: 1px solid lighten($background, 3%);
-		color: $white;
+		color: $color-3;
 	}
 
 	@include MQ(M) {
