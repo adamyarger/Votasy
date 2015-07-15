@@ -1,0 +1,4 @@
+<%= form_for([@post, @post.comments.build]) do |f| %>
+  <%= f.text_area :body, placeholder: 'Comment' %>
+  <%= f.submit 'Post' %>
+<% end %>
