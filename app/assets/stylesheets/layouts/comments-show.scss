@@ -10,6 +10,13 @@
 
   .comment {
   	width: 100%;
+  	margin-top: 10px;
+
+  	.comment-name {
+  		padding: 15px 0 0 15px;
+  		color: $color-3;
+  		font-weight: bold;
+  	}
   }
 
 
