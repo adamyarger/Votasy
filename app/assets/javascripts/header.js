@@ -1,8 +1,8 @@
 
 // Smal MQ drop down menu
 $(document).ready(function($){
-	$('div.nav-bell').on('click', function(event){
-		if($(event.target).is('.nav-bell')) $('.main-nav').children('ul').toggleClass('is-visible');
+	$('div.nav-user-group').on('click', function(event){
+		if($(event.target).is('div.nav-user-group img')) $('.main-nav').children('ul').toggleClass('is-visible');
 	});
 });
 
