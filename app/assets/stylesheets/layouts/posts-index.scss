@@ -1,12 +1,14 @@
 .posts-container {
-  margin: 0;
-  width: 300px;
+  margin: 10px;
+  width: 280px;
   background: $white;
-  border-radius: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
 
   img {
     width: 100%;
     height: auto;
+    border-bottom: 1px solid $border;
   }
 
   .posts-avatar {
@@ -25,14 +27,18 @@
 
   .posts-content {
     @include font-size(13px);
-    color: darken($border, 25%);
+    color: darken($border, 35%);
     margin-bottom: 12px;
   }
 
   .posts-name {
     @include font-size(14px);
-    color: $color-3;
+    color: darken($border, 35%);
     font-weight: bold;
+
+    a {
+      color: darken($border, 35%);
+    }
   }
 
   .posts-tags {

@@ -55,6 +55,7 @@
 			color: $white;
 			left: 90px;
 	  	top: 25px;
+	  	@include font-size(18px);
 		}
 	}
 }
