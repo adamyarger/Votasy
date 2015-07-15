@@ -1,3 +1,22 @@
-<% @posts.each do |post| %>
-	<%= image_tag(post.image.url) %>
-<% end %>
+<div id="masonry-container" class="transitions-enabled">
+	<% @posts.each do |post| %>
+		<div class="posts-container">
+			<%= link_to (image_tag(post.image.url)), post, class: "image_link" %>
+			<div class="posts-body">
+				<p class="posts-content"><%= post.content %></p>
+				<p>
+					<span class="posts-avatar"><%= image_tag(post.user.avatar.url(:thumb)) %></span>
+					<span class="posts-name">
+						<%= post.user.name %>
+						<p class="posts-tags">tags</p>
+					</span>
+				</p>
+			</div>
+		</div>
+	<% end %>
+</div>
+
+
+
+
+
