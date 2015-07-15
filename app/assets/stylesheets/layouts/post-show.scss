@@ -49,4 +49,28 @@
     color: darken($border, 25%);
     text-align: left;
   }
+
+  @include MQ(M) {
+    @include span-columns(8);
+    @include shift(2);
+    margin-top: 20px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+
+    img {
+      margin-bottom: 10px;
+    }
+
+    .posts-body {
+      border-top: 1px solid $border;
+    }
+  }
 }
+
+
+
+
+
+
+
+
+
