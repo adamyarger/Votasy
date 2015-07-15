@@ -1,0 +1,43 @@
+.form-back {
+	@include size(100%);
+	background: $purple;
+	@include radial-gradient(#664a86, #534292)
+}
+
+.form-bigbox {
+	@include outer-container;
+	margin-bottom: 150px;
+}
+
+.form-box {
+	@include span-columns(6);
+	@include shift(3);
+  background-color: $white;
+  padding: 40px;
+  margin-top: 100px;
+  border-radius: 10px;
+
+  h1 {
+  	text-align: center;
+	  margin-bottom: 35px;
+	  font-size: 2em;
+	  color: $purple;
+  }
+
+  .field {
+  	margin-bottom: 20px;
+  }
+
+	#{$all-button-inputs} {
+		width: 100%;
+	}
+
+	.login {
+		margin-top: 25px;
+
+		a {
+			color: $purple;
+			text-decoration: underline;
+		}
+	}
+}

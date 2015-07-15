@@ -1,0 +1,33 @@
+#{$all-button-inputs},
+button {
+  @include appearance(none);
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  border-radius: $base-border-radius;
+  border: 1px solid $purple;
+  color: $purple;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: normal;
+  line-height: 1;
+  padding: 0.60em 1em;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($purple, 50%);
+    color: $color-1;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+
