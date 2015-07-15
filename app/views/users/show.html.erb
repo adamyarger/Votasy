@@ -1,7 +1,8 @@
 <section id="intro">
-	<div id="intro-background"></div>
-	<div id="intro-user-info">
-		<div><%= image_tag(@user.avatar.url(:thumb)) %></div>
+	<div id="intro-background">
+		<div id="intro-user-info" class="glass">
+			<div class="intro-user-avatar"><%= image_tag(@user.avatar.url(:thumb)) %></div>
+		</div>
 	</div>
 </section>
 

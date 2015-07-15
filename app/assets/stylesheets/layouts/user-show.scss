@@ -9,5 +9,29 @@
 		width: 100%;
 		background: url('ocean_coast.jpg') no-repeat center center;
 		background-size: cover;
+
+		#intro-user-info {
+			width: 100%;
+			height: 70px;
+			background: rgba(2,23,37,0.8);
+			position: absolute;
+		  bottom: 0;
+  		left: 0;
+		}
 	}
+
+	.intro-user-avatar {
+		img {
+			width: 50px;
+			border-radius: 50%;
+			position: absolute;
+			top: 10px;
+  		left: 15px;
+  		border: 2px solid $white;
+		}
+	}
+}
+
+.glass::before {
+	@include filter(blur(5px));
 }
