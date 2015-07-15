@@ -7,6 +7,18 @@ $color-2: #f0f1e7; // cream
 $color-3: #444;; // grey text
 $white:   #fff; //white
 
+$blue: #477dca;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+$background: #f5f5f5;
+$background-border: 1px solid #e3e3e3;
+
+// Added Colors
+$purple: #435779;
+$dark-blue: #435779;
+
+
 //header height
 
 $header-height-S: 50px;
@@ -44,18 +56,6 @@ $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
-
-// Colors
-$blue: #477dca;
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #ddd;
-$white: #fff;
-$background: #f5f5f5;
-$background-border: 1px solid #e3e3e3;
-
-// Added Colors
-$purple: #664a86;
 
 // Font Colors
 $base-background-color: #F6F8FA;
