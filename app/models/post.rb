@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
 	belongs_to :user
+	has_many :comments
 	validates :user_id, :image, presence: true
 
 	validates_with AttachmentSizeValidator, :attributes => :image, :less_than => 2.megabytes
