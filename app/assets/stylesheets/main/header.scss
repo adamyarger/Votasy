@@ -75,6 +75,25 @@ Header
     }
   }
 
+  .nav-user-group {
+	  width: 45px;
+	  position: absolute;
+	  right: 56px;
+	  top: 5px;
+	  cursor: pointer;
+
+		img {
+			  width: 35px;
+			  border-radius: 50%;
+			  margin-top: 3px;
+				@include clearfix;
+		}
+
+		@include MQ(M) {
+			width: 120px;
+		}
+	}
+
   .nav-bell {
 	  width: 50px;
 	  height: 100%;
