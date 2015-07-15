@@ -1,3 +1,10 @@
+<section id="intro">
+	<div id="intro-background"></div>
+	<div id="intro-user-info">
+		<div><%= image_tag(@user.avatar.url(:thumb)) %></div>
+	</div>
+</section>
+
 <div id="masonry-container" class="transitions-enabled">
 	<% @posts.each do |post| %>
 		<div class="posts-container">

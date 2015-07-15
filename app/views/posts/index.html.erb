@@ -7,7 +7,7 @@
 				<p>
 					<span class="posts-avatar"><%= image_tag(post.user.avatar.url(:thumb)) %></span>
 					<span class="posts-name">
-						<%= post.user.name %>
+						<%= link_to post.user.name, post.user %>
 						<p class="posts-tags">tags</p>
 					</span>
 				</p>
