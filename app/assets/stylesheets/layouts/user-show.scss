@@ -30,8 +30,31 @@
   		border: 2px solid $white;
 		}
 	}
-}
 
-.glass::before {
-	@include filter(blur(5px));
+	.intro-user-name {
+		position: relative;
+		color: $white;
+		left: 90px;
+  	top: 25px;
+	}
+
+	@include MQ(M) {
+		.intro-user-avatar {
+			img {
+				width: 50px;
+				border-radius: 50%;
+				position: absolute;
+				top: 10px;
+	  		left: 15px;
+	  		border: 2px solid $white;
+			}
+		}
+
+		.intro-user-name {
+			position: relative;
+			color: $white;
+			left: 90px;
+	  	top: 25px;
+		}
+	}
 }
