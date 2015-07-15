@@ -17,12 +17,7 @@
  @import 'reset';
  @import 'bourbon';
  @import 'neat';
- @import 'base/variables';
- @import 'base/mixins';
- @import 'base/layout';
- @import 'base/forms';
- @import 'base/buttons';
- @import 'modules/flashes';
+ @import 'base/base';
  @import 'modules/forms';
  @import 'main/primary';
  @import 'modules/modules';
