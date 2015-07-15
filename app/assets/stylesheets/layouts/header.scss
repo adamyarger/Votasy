@@ -138,7 +138,7 @@ Header
 		right: 0;
 		box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
 		width: 100%;
-		@include transform(translateY(-100%));
+		@include transform(translateY(-101%));
 
 		&.is-visible {
 			@include transform(translateY($header-height-S));
@@ -168,7 +168,8 @@ Header
 		ul {
 			width: 300px;
 			right: 50px;
-			@include transform(translateY(-100%));
+			position: fixed;
+			@include transform(translateY(-101%));
 
 			&.is-visible {
 				@include transform(translateY($header-height-S));
