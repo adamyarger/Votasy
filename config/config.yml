@@ -1,0 +1,10 @@
+defaults: &defaults
+  app_name: "curate"
+  embedly_key: "4e4f48f422454147b45661749719a0d3"
+
+development:
+  <<: *defaults
+  domain: "http://localhost:3000/"
+
+test:
+  <<: *defaults
