@@ -5,7 +5,7 @@ class LinksController < ApplicationController
 
 		if @link.save
 			flash[:success] = 'Successfully Posted!'
-			redirect_to root_path
+			redirect_to @link
 		else
 			flash[:error] = 'Something went wrong'
 			redirect_to root_path
