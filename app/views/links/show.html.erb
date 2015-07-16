@@ -1,0 +1,23 @@
+<div class="bigbox">
+	<div class="box">
+		<div class="video">
+			<div class="video-wrapper">
+				<% if @link.html.present? %>
+        	<%= @link.html.html_safe %>
+        <% end %>
+			</div>
+		</div>
+		<div class="posts-body">
+			<p class="posts-content"><%= @link.content %></p>
+			<p>
+				<span class="posts-avatar"><%= image_tag(@link.user.avatar.url(:thumb)) %></span>
+				<span class="posts-name">
+					<%= @link.user.name %>
+					<p class="posts-tags">tags</p>
+				</span>
+			</p>
+		</div>
+	</div>
+</div>
+
+

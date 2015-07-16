@@ -16,6 +16,10 @@ class LinksController < ApplicationController
 		@link = Link.new
 	end
 
+	def show
+		@link = Link.find(params[:id])
+	end
+
 	private
 
 		def link_params
