@@ -1,4 +1,5 @@
 class LinksController < ApplicationController
+	before_action :authenticate_user!
 	def create
 		@link = current_user.links.build(link_params)
 
