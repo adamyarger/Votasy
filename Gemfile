@@ -13,6 +13,7 @@ gem "devise"
 # gem "auto_html"
 gem 'faker'
 gem "paperclip", "~> 4.3"
+gem 'embedly', '~> 1.9.1'
 
 # design
 gem "font-awesome-rails"
