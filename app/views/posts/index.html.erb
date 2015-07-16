@@ -1,6 +1,6 @@
 
 <div id="masonry-container" class="transitions-enabled">
-	<% (@posts.to_a + @links.to_a).sort_by(&:created_at).each do |post| %>
+	<% @array.each do |post| %>
 	  <% if post.is_a? Post %>
 			<div class="posts-container">
 				<%= link_to (image_tag(post.image.url)), post, class: "image_link" %>
