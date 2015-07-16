@@ -1,0 +1,11 @@
+.play-button {
+  width: 100%;
+  height: 100%;
+  background: url("play.svg") no-repeat center center;
+  background-size: 40px 40px;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
