@@ -11,6 +11,10 @@ class LinksController < ApplicationController
 		end
 	end
 
+	def new
+		@link = Link.new
+	end
+
 	private
 
 		def link_params
