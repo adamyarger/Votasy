@@ -19,8 +19,10 @@
 			<div class="posts-container">
 				<div class="video">
 					<div class="video-wrapper">
-							<%= link_to (image_tag(post.thumbnail_url)), post, class: 'image_link' %>
-							<div class="play-button"></div>
+							<%= (image_tag(post.thumbnail_url)) %>
+							<%= link_to post, class: 'image_link' do %>
+								<div class="play-button"></div>
+							<% end %>
 					</div>
 				</div>
 				<div class="posts-body">
