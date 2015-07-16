@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 	def index
 		@posts = Post.all
 		@links = Link.all
-		@array = (@posts.to_a + @links.to_a).sort_by(&:created_at)
+		@array = (@posts.to_a + @links.to_a).sort_by(&:created_at).paginate(:page => params[:page], :per_page => 20)
 	end
 
 	def create
