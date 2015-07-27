@@ -10,6 +10,8 @@ describe User do
 	it { should have_many(:links) }
 	it { should have_many(:active_relationships) }
 	it { should have_many(:following).through(:active_relationships).source(:followed) }
+	it { should have_many(:passive_relationships) }
+	it { should have_many(:followers).through(:passive_relationships).source(:follower) }
 
 	it { should validate_presence_of(:name) }
 
