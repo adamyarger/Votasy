@@ -3,6 +3,7 @@
 		<div id="intro-user-info" class="glass">
 			<span class="intro-user-avatar"><%= image_tag(@user.avatar.url(:thumb)) %></span>
 			<span class="intro-user-name"><%= @user.name %></span>
+			<span class="intro-user-follow"><%= render 'follow_form' if user_signed_in? %></span>
 
 			<ul>
 				<li>Followers</li>
