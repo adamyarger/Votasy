@@ -8,6 +8,8 @@ describe Relationship do
 		@relationship = Relationship.new(follower_id: @follower.id, followed_id: @followed.id)
 	end
 
+	it { should belong_to(:follower) }
+	it { should belong_to(:followed) }
 	it { should validate_presence_of(:follower_id) }
 	it { should validate_presence_of(:followed_id) }
 
