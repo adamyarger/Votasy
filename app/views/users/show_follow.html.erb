@@ -1,0 +1,7 @@
+<% if @users.any? %>
+  <div class="user_avatars">
+    <% @users.each do |user| %>
+    	<%= link_to image_tag(post.user.avatar.url(:thumb)), user %>
+    <% end %>
+  </div>
+<% end %>
