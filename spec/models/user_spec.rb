@@ -4,6 +4,8 @@ describe User do
 	it { should have_many(:posts) }
 	it { should have_many(:comments) }
 	it { should have_many(:links) }
+	it { should have_many(:active_relationships) }
+	it { should have_many(:following).through(:active_relationships) }
 
 	it { should validate_presence_of(:name) }
 
@@ -13,4 +15,5 @@ describe User do
 								rejecting('text/plain', 'text/xml') }
 	it { should validate_attachment_size(:avatar).
 							less_than(2.megabytes) }
+
 end
