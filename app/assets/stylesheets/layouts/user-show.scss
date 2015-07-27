@@ -57,5 +57,11 @@
 	  	top: 25px;
 	  	@include font-size(18px);
 		}
+
+		.intro-user-follow {
+	    position: absolute;
+	    left: 220px;
+	    top: 17px;
+		}
 	}
 }
