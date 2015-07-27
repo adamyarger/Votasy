@@ -33,9 +33,9 @@ describe User do
     expect(@user).to be_following(@followed)
   end
 
-  # it "should include the followed user in the following array" do
-  #   @user.follow(@followed)
-  #   @user.following?.(@followed).should be_true
-  # end
+  it "should include the followed user in the following array" do
+    @user.follow(@followed)
+    expect(@user.following.include?(@followed)).to be_truthy
+  end
 
 end
