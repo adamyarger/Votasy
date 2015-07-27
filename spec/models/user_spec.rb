@@ -24,13 +24,23 @@ describe User do
     expect(@user).to respond_to(:following?)
   end
   
-  it "should have a follow! method" do
+  it "should have a follow method" do
     expect(@user).to respond_to(:follow)
+  end
+
+  it "should have a unfollow method" do
+  	expect(@user).to respond_to(:unfollow)
   end
 
   it "should follow another user" do
     @user.follow(@followed)
     expect(@user).to be_following(@followed)
+  end
+
+  it "should unfollow another user" do
+  	@user.follow(@followed)
+  	@user.unfollow(@followed)
+  	expect(@user.following.include?(@followed)).to be_falsey
   end
 
   it "should include the followed user in the following array" do
