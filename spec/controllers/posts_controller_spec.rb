@@ -38,19 +38,6 @@ describe PostsController, type: :controller do
     end
 	end
 
-	describe 'GET #index' do
-		it 'populates an array of posts' do
-			post = FactoryGirl.create :post
-			get :index
-			expect(assigns(:posts)).to eq([post])
-		end
-
-		it 'renders the :index view' do
-			get :index
-			expect(response).to render_template :index
-		end
-	end
-
 	describe 'GET #show' do
 		it 'assigns the correct post' do
 			post = FactoryGirl.create :post

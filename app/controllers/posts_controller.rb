@@ -1,12 +1,6 @@
 class PostsController < ApplicationController
 	before_action :authenticate_user!, only: [:create, :new]
 
-	def index
-		@posts = current_user.feed_posts
-		@links = current_user.feed_links
-		@array = (@posts.to_a + @links.to_a).sort_by(&:created_at).paginate(:page => params[:page], :per_page => 20)
-	end
-
 	def create
 		@post = current_user.posts.build(post_params)
 

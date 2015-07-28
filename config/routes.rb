@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
-  root 'posts#index'
+  root 'static_pages#feed'
 
   resources :users, only: [:show] do
   	member do
