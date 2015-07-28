@@ -15,15 +15,15 @@
 			<div class="right-info">
 				<ul>
 					<li>
-						<div class="right-stats">900</div>
+						<div class="right-stats"><%= @user.posts.count %></div>
 						<div class="small">Followers</div>
 					</li>
 					<li>
-						<div class="right-stats">500</div>
+						<div class="right-stats"><%= @user.following.count %></div>
 						<div class="small">Following</div>
 					</li>
 					<li>
-						<div class="right-stats">300</div>
+						<div class="right-stats"><%= @user.followers.count %></div>
 						<div class="small">Posts</div>
 					</li>
 				</ul>
