@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Post do
 	it { should belong_to(:user) }
 	it { should validate_presence_of(:user_id) }
-	# it { should have_many(:comments) }
+	it { should have_many(:comments) }
 
 	# paperclip matchers
 	it { should validate_attachment_content_type(:image).
