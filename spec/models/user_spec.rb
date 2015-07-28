@@ -58,23 +58,17 @@ describe User do
     expect(@user).to respond_to(:feed_links)
   end
 
-  it "should have the correct posts feed" do
-    user_1 = FactoryGirl.create(:user)
-    user_2 = FactoryGirl.create(:user)
-    user_3 = FactoryGirl.create(:user)
-    
-    user_3.posts.each do |post_following|
-      expect(user_1.feed.include?(post_following)).to be_truthy
-    end
+  # it "should include the followed users feed posts" do
+  #   @user_1 = FactoryGirl.create(:user)
+  #   @user_2 = FactoryGirl.create(:user)
+  #   @user_3 = FactoryGirl.create(:user)
+  #   @post_following = build(:post, user_id: @user_2.id)
+  #   @user_1.follow(@user_2)
 
-    user_1.posts.each do |post_self|
-      expect(user_1.feed.include?(post_self)).to be_truthy
-    end
-
-    user_2.posts.each do |post_self|
-      expect(user_1.feed.include?(post_unfollowed)).to be_falsey
-    end
-  end
+  #     expect(@user_1.feed_posts.include(@post_following)).to be_truthy
+  #     expect(@user_1.feed.include(post_self)).to be_truthy
+  #     expect(@user_1.feed.include(post_unfollowed)).to be_falsey
+  # end
 
 end
 
