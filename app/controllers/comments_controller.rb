@@ -2,18 +2,10 @@ class CommentsController < ApplicationController
 	before_filter :authenticate_user!
 
 	def create
-		@post = Post.find(params[:post_id])
-		@comment = Comment.create(comment_params)
-		@comment.user_id = current_user.id
-		@comment.post_id = @post.id
-
-		if @comment.save
-			flash[:success] = 'Comment Posted'
-			redirect_to post_path(@post)
-		else
-			flash[:error] = 'Something Went Wrong'
-			redirect_to post_path(@post)
-		end
+		@comment = @commentable.comments.new(comment_params)
+		@comment.user = current_user
+		@comment.save
+		redirect_to @commentable, notice: 'Comment Posted!'
 	end
 
 	private

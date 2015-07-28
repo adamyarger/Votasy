@@ -1,5 +1,6 @@
 class Link < ActiveRecord::Base
-	belongs_to(:user)
+	belongs_to :user
+  has_many :comments, as: :commentable
 	validates :content, presence: true
 
 	after_create :update_from_embedly
