@@ -1,15 +1,24 @@
 <section id="intro">
 	<div id="intro-background">
 		<div id="intro-user-info" class="glass">
-			<span class="intro-user-avatar"><%= image_tag(@user.avatar.url(:thumb)) %></span>
-			<span class="intro-user-name"><%= @user.name %></span>
-			<span class="intro-user-follow"><%= render 'follow_form' if user_signed_in? %></span>
 
-			<ul>
-				<li>Followers</li>
-				<li>Following</li>
-				<li>Posts</li>
-			</ul>
+			<div class="left-info">
+				<div class="intro-user-avatar">
+					<%= image_tag(@user.avatar.url(:thumb)) %>
+				</div>
+				<ul>
+					<li class="intro-user-name"><%= @user.name %></li>
+					<li class="intro-user-follow"><%= render 'follow_form' if user_signed_in? %></li>
+				</ul>
+			</div>
+
+			<div class="right-info">
+				<ul>
+					<li>Followers</li>
+					<li>Following</li>
+					<li>Posts</li>
+				</ul>
+			</div>
 
 		</div>
 	</div>

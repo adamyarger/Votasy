@@ -17,6 +17,7 @@
 			position: absolute;
 		  bottom: 0;
   		left: 0;
+  		display: inline-block;
 		}
 	}
 
@@ -24,22 +25,19 @@
 		img {
 			width: 50px;
 			border-radius: 50%;
-			position: absolute;
-			top: 10px;
-  		left: 15px;
+			margin-right: 1em;
+			margin-bottom: 1em;
   		border: 2px solid $white;
 		}
 	}
 
 	.intro-user-name {
-		position: relative;
 		color: $white;
-		left: 90px;
-  	top: 25px;
 	}
 
 	@include MQ(M) {
 		.intro-user-avatar {
+
 			img {
 				width: 50px;
 				border-radius: 50%;
@@ -51,17 +49,31 @@
 		}
 
 		.intro-user-name {
-			position: relative;
 			color: $white;
-			left: 90px;
-	  	top: 25px;
+			padding-top: 9px;
 	  	@include font-size(18px);
 		}
 
-		.intro-user-follow {
-	    position: absolute;
-	    left: 220px;
-	    top: 17px;
+		.left-info {
+
+			ul {
+		    top: 16px;
+		    left: 80px;
+		    position: relative;
+			}
+
+			ul li {
+				list-style: none;
+				display: inline;
+				text-align: left;
+				padding-right: 1em; 
+				float: left;
+			}
+		}
+
+		.right-info {
+			float: right;
+			color: $white;
 		}
 	}
 }
