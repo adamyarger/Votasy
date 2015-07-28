@@ -17,8 +17,7 @@ class PostsController < ApplicationController
 		if params[:tag]
 			@posts = Post.tagged_with(params[:tag])
 			@links = Link.tagged_with(params[:tag])
-			@array_set = (@posts.to_a + @links.to_a).sort_by(&:created_at)
-			@array = @array_set.paginate(:page => params[:page], :per_page => 10)
+			@array = (@posts.to_a + @links.to_a).sort_by(&:created_at).paginate(:page => params[:page], :per_page => 10)
 		else
 			@posts = Post.all
 			@links = Link.all
