@@ -13,7 +13,7 @@
 				<span class="posts-avatar"><%= image_tag(@link.user.avatar.url(:thumb)) %></span>
 				<span class="posts-name">
 					<%= @link.user.name %>
-					<p class="posts-tags">tags</p>
+					<p class="posts-tags"><%= raw @link.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
 				</span>
 			</p>
 		</div>
