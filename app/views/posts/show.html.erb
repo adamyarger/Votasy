@@ -14,7 +14,7 @@
 	</div>
 
 	<div class="comments-box">
-		 <!-- render 'comments/form' 
-		 render 'comments/comments' -->
+		 <%= render partial: 'comments/form', locals: { commentable: @post } %>
+		 
 	</div>
 </div>
