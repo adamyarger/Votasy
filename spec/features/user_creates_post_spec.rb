@@ -9,6 +9,8 @@ feature 'user creates a new post' do
 
 		expect(page).to have_css('img')
 		expect(page).to have_content('first post')
+		expect(page).to have_link 'edm'
+		expect(page).to have_link 'techno'
 	end
 end
 

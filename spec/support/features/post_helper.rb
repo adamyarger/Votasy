@@ -3,7 +3,7 @@ module Features
 		visit 'posts/new'
 		attach_file 'post[image]', post_image
 		fill_in 'Write a description.', with: post_content
-		fill_in 'Tags (seperate by commas).', with: post_content
+		fill_in 'Tags (seperate by commas).', with: tags
 		click_on 'Post'
 	end
 
