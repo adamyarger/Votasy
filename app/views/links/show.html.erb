@@ -18,6 +18,11 @@
 			</p>
 		</div>
 	</div>
+
+	<div class="comments-box">
+		 <%= render partial: 'comments/form', locals: { commentable: @link } %>
+		 <%= render partial: 'comments/comments', locals: { commentable: @link } %>
+	</div>
 </div>
 
 
