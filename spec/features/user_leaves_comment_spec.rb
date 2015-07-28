@@ -5,7 +5,7 @@ feature 'user leaves a comment' do
 		user = FactoryGirl.create(:user)
 		login_as(user, scope: :user)
 
-		create_post('spec/support/photos/blur_holder.jpg', 'first post')
+		create_post('spec/support/photos/blur_holder.jpg', 'first post', 'edm, techno')
 		find('.image_link').click
 
 		fill_in 'Comment', :with => 'first comment'

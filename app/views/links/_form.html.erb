@@ -1,5 +1,6 @@
 <%= form_for :link, url: links_path do |link| %>
-    <%= link.text_field :content, placeholder: "Submit a link", class: 'full-width', id: "url" %>
+    <%= link.text_field :link, placeholder: "Submit a link", class: 'full-width', id: "url" %>
+    <%= link.text_area :content, placeholder: "Description", class: 'full-width', id: "url" %>
     <%= link.text_field :tag_list, placeholder: 'Tags (seperate by commas)' %>
     <br>
     <%= link.submit "Submit Link", class: "full-width" %>
