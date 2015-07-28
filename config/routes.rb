@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   resources :posts, only: [:show, :create, :new] do
   	resources :comments, module: :posts
   end
+  get 'tags/:tag', to: 'static_pages#feed', as: :tag
 end

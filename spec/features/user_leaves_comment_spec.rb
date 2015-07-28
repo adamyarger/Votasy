@@ -12,7 +12,5 @@ feature 'user leaves a comment' do
 		click_on('Comment')
 
 		expect(page).to have_content 'first comment'
-
-
 	end
 end
