@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
 		@comment = @commentable.comments.new(comment_params)
 		@comment.user = current_user
 		@comment.save
-		redirect_to @commentable, notice: 'Comment Posted!'
+		redirect_to :back, notice: 'Comment Posted!'
 	end
 
 	private
