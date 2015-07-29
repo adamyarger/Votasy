@@ -14,6 +14,7 @@
 //= require masonry/jquery.masonry
 //= require jquery_ujs
 //= require modernizr
+//= require jquery.soulmate
 //= require header
 //= require_tree .
 
