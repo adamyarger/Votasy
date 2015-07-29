@@ -19,8 +19,10 @@ class User < ActiveRecord::Base
   has_attached_file :avatar, :styles => { :medium => "250x250#", :thumb => "100x100#" }, 
                                                     :default_url => ":style/missing.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
-
   validates :name, presence: true
+
+  after_save :load_into_soulmate
+  before_destroy :remove_from_soulmate
 
   def follow(other_user)
     active_relationships.create(followed_id: other_user.id)
@@ -47,4 +49,27 @@ class User < ActiveRecord::Base
     Link.where("user_id IN (#{following_ids})
                      OR user_id = :user_id", user_id: id)
   end
+
+  private
+
+    def load_into_soulmate
+      loader = Soulmate::Loader.new("users")
+      loader.add("term" => name, "id" => self.id, "data" => {
+        "link" => Rails.application.routes.url_helpers.user_path(self)
+        })
+    end
+   
+    def remove_from_soulmate
+      loader = Soulmate::Loader.new("recipes")
+        loader.remove("id" => self.id)
+    end
 end
+
+
+
+
+
+
+
+
+

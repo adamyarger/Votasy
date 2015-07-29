@@ -16,6 +16,9 @@ gem "paperclip", "~> 4.3"
 gem 'embedly', '~> 1.9.1'
 gem 'will_paginate', '~> 3.0.6'
 gem 'acts-as-taggable-on', '~> 3.4'
+gem 'rack-contrib'
+gem 'soulmate', :require => 'soulmate/server'
+gem 'redis'
 
 
 # design

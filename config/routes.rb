@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
   root 'static_pages#feed'
 
+  mount Soulmate::Server, :at => '/autocomplete'
+
   resources :users, only: [:show] do
   	member do
   		get :following, :followers
