@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require modernizr
 //= require jquery.soulmate
+//= require search
 //= require header
 //= require_tree .
 

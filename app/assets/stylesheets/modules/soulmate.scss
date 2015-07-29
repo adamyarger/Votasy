@@ -1,30 +1,29 @@
 #soulmate {
-    background-color: #fafafa;
-    border: 1px solid #bbb;
-    display: none;
-    font: 12px/14px "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: normal;
-    list-style: none;
-    margin: 0 0 0 10px;
-    padding: 0;
-    position: absolute;
-    text-shadow: 0 0 0 white;
-    /* play around with the top and left properties for correct positioning */
-    top: 201px; 
-    left: 460px;
-    width: 579px;
-    z-index: 1000;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
-    -khtml-border-radius: 4px;
-    border-radius: 4px;
-    -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    -khtml-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    -ms-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    -o-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #fafafa;
+  border: 1px solid #bbb;
+  display: none;
+  font: 12px/14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  list-style: none;
+  /* margin: 0 0 0 10px; */
+  /* padding: 0; */
+  position: fixed;
+  text-shadow: 0 0 0 white;
+  top: 50px;
+  left: 60px;
+  width: 579px;
+  z-index: 1000;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  -khtml-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
  #soulmate .soulmate-type-container {
@@ -95,19 +94,6 @@
  #soulmate .soulmate-type:after {
     clear: both;
 }
-/**  added   **/
-/*.container {
-    width: 500px;
-    margin: 0 auto;
-    padding: 100px;
-    text-align: center;
-}*/
- 
-#search{
-    width: 400px;
-    padding: 10px;
-    margin-bottom: 20px;
-}
  
 li.soulmate-suggestion{
     text-align: left;
@@ -123,6 +109,8 @@ li.soulmate-suggestion{
         padding-top: 17px;
     }
 }
+
+
 
 
 

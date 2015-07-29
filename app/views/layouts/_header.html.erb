@@ -3,10 +3,12 @@
 	<div class="navigation-tools">
       <div class="search-bar">
         <form role="search">
-          <input type="search" placeholder="Search Stuff" />
-          <button type="submit">
-            <%= image_tag('search.svg') %>
-          </button>
+          <%= form_tag do %>
+            <%= search_field_tag "search", nil, placeholder: "Search", autocomplete: :off %>
+            <button type="submit">
+              <%= image_tag('search.svg') %>
+            </button>
+          <% end %>
         </form>
       </div>
     </div>
