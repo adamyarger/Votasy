@@ -2,8 +2,8 @@ class Link < ActiveRecord::Base
   belongs_to :user
   has_many :comments, as: :commentable
   validates :content, presence: true
-  acts_as_taggable
   acts_as_votable
+  acts_as_taggable
   default_scope -> { order(created_at: :desc) }
 
 	after_create :update_from_embedly
