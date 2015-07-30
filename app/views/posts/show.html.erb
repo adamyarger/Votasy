@@ -1,11 +1,11 @@
 <div class="bigbox">
 	<div class="box">
 
-		<div class="hover-tile-outer visible">
+		<div class="hover-tile-outer">
 			<%= image_tag(@post.image.url) %>
 			<div class="hover-tile-container">
 				<div class="hover-tile hover-tile-visible"></div>
-				<div class="hover-tile hover-tile-hidden">
+				<div class="hover-tile hover-tile-hidden is_visible">
 					<p class="posts-like">
 						<div class="vote">
 							<% if current_user.voted_as_when_voted_for(@post) %>
