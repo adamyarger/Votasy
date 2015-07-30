@@ -12,12 +12,12 @@
 							<p class="posts-like">
 								<div class="vote">
 									<%= link_to like_post_path(post), method: :put, class: 'up' do %>
-									<span><i class="fa fa-chevron-up"></i></span>
+									<span>Like</span>
 									<% end %>
 									<%= link_to dislike_post_path(post), method: :put, class: 'down' do %>
-										<span><i class="fa fa-chevron-down"></i></span>
+										<span>Dislike</i></span>
 									<% end %>
-									<span><%= post.get_upvotes.size %> points</span>
+									<span><%= post.get_upvotes.size %> likes</span>
 								</div>
 							</p>
 						</div>

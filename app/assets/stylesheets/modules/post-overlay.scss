@@ -6,6 +6,11 @@
   position: absolute;
   top: 0;
   left: 0;
+  color: $white;
+
+  a {
+    color: $white;
+  }
 }
 
 .is-visible {
