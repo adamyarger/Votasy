@@ -56,11 +56,11 @@
 							<p class="posts-like">
 								<div class="vote">
 									<% if current_user.voted_as_when_voted_for(post) %>
-										<%= link_to dislike_post_path(post), method: :put, class: 'down' do %>
+										<%= link_to dislike_link_path(post), method: :put, class: 'down' do %>
 											<span><i class="fa fa-heart"></i></span>
 										<% end %>
 									<% else %>
-										<%= link_to like_post_path(post), method: :put, class: 'up' do %>
+										<%= link_to like_link_path(post), method: :put, class: 'up' do %>
 											<span><i class="fa fa-heart-o"></i></span>
 										<% end %>
 									<% end %>

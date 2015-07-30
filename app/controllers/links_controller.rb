@@ -23,7 +23,7 @@ class LinksController < ApplicationController
 	def upvote
 		@link = Link.find(params[:id])
 
-		if @post.save
+		if @link.save
 			@link.upvote_by current_user
 			flash[:success] = "Upvoted"
 		else
