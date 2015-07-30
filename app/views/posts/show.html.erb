@@ -1,6 +1,29 @@
 <div class="bigbox">
 	<div class="box">
-		<%= image_tag(@post.image.url) %>
+
+		<div class="hover-tile-outer visible">
+			<%= image_tag(@post.image.url) %>
+			<div class="hover-tile-container">
+				<div class="hover-tile hover-tile-visible"></div>
+				<div class="hover-tile hover-tile-hidden">
+					<p class="posts-like">
+						<div class="vote">
+							<% if current_user.voted_as_when_voted_for(@post) %>
+								<%= link_to dislike_post_path(@post), method: :put, class: 'down' do %>
+									<span><i class="fa fa-heart"></i></span>
+								<% end %>
+							<% else %>
+								<%= link_to like_post_path(@post), method: :put, class: 'up' do %>
+									<span><i class="fa fa-heart-o"></i></span>
+								<% end %>
+							<% end %>
+							<span><%= @post.get_upvotes.size %> likes</span>
+						</div>
+					</p>
+				</div>
+			</div>
+		</div>
+
 		<div class="posts-body">
 			<p class="posts-content"><%= @post.content %></p>
 			<p>
@@ -18,3 +41,5 @@
 		 <%= render partial: 'comments/comments', locals: { commentable: @post } %>
 	</div>
 </div>
+
+

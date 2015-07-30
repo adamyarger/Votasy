@@ -54,7 +54,7 @@
   @include MQ(M) {
     @include span-columns(8);
     @include shift(2);
-    margin-top: 20px;
+    margin-top: 80px;
     box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
 
     img {
