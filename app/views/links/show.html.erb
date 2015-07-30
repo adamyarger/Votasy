@@ -1,10 +1,31 @@
 <div class="bigbox">
 	<div class="box">
-		<div class="video">
-			<div class="video-wrapper">
-				<% if @link.html.present? %>
-        	<%= @link.html.html_safe %>
-        <% end %>
+		<div class="hover-tile-outer">
+			<div class="video">
+				<div class="video-wrapper">
+						<% if @link.html.present? %>
+		        	<%= @link.html.html_safe %>
+		        <% end %>
+				</div>
+			</div>
+			<div class="hover-tile-container">
+				<div class="hover-tile hover-tile-visible"></div>
+				<div class="hover-tile hover-tile-hidden">
+					<p class="posts-like">
+						<div class="vote">
+							<% if current_user.voted_as_when_voted_for(@link) %>
+								<%= link_to dislike_link_path(@link), method: :put, class: 'down' do %>
+									<span><i class="fa fa-heart"></i></span>
+								<% end %>
+							<% else %>
+								<%= link_to like_link_path(@link), method: :put, class: 'up' do %>
+									<span><i class="fa fa-heart-o"></i></span>
+								<% end %>
+							<% end %>
+							<span><%= @link.get_upvotes.size %> likes</span>
+						</div>
+					</p>
+				</div>
 			</div>
 		</div>
 		<div class="posts-body">
@@ -24,5 +45,7 @@
 		 <%= render partial: 'comments/comments', locals: { commentable: @link } %>
 	</div>
 </div>
+
+
 
 
