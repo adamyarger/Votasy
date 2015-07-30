@@ -17,6 +17,7 @@
 //= require jquery.soulmate
 //= require search
 //= require header
+//= require post_overlay
 //= require_tree .
 
 

@@ -3,7 +3,27 @@
 	<% @array.each do |post| %>
 	  <% if post.is_a? Post %>
 			<div class="posts-container">
-				<%= link_to (image_tag(post.image.url)), post, class: "image_link" %>
+			
+				<div class="hover-tile-outer">
+					<%= link_to (image_tag(post.image.url)), post, class: "image_link" %>
+					<div class="hover-tile-container">
+						<div class="hover-tile hover-tile-visible"></div>
+						<div class="hover-tile hover-tile-hidden">
+							<p class="posts-like">
+								<div class="vote">
+									<%= link_to like_post_path(post), method: :put, class: 'up' do %>
+									<span><i class="fa fa-chevron-up"></i></span>
+									<% end %>
+									<%= link_to dislike_post_path(post), method: :put, class: 'down' do %>
+										<span><i class="fa fa-chevron-down"></i></span>
+									<% end %>
+									<span><%= post.get_upvotes.size %> points</span>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+
 				<div class="posts-body">
 					<p class="posts-content"><%= post.content %></p>
 					<p>
@@ -17,14 +37,34 @@
 			</div>
 	  <% else %>
 			<div class="posts-container">
-				<div class="video">
-					<div class="video-wrapper">
-							<%= (image_tag(post.thumbnail_url)) %>
-							<%= link_to post, class: 'image_link' do %>
-								<div class="play-button"></div>
-							<% end %>
+
+				<div class="hover-tile-outer">
+					<div class="video">
+						<div class="video-wrapper">
+								<%= (image_tag(post.thumbnail_url)) %>
+								<%= link_to post, class: 'image_link' do %>
+									<div class="play-button"></div>
+								<% end %>
+						</div>
+					</div>
+					<div class="hover-tile-container">
+						<div class="hover-tile hover-tile-visible"></div>
+						<div class="hover-tile hover-tile-hidden">
+							<p class="posts-like">
+								<div class="vote">
+									<%= link_to like_post_path(post), method: :put, class: 'up' do %>
+									<span><i class="fa fa-chevron-up"></i></span>
+									<% end %>
+									<%= link_to dislike_post_path(post), method: :put, class: 'down' do %>
+										<span><i class="fa fa-chevron-down"></i></span>
+									<% end %>
+									<span><%= post.get_upvotes.size %> points</span>
+								</div>
+							</p>
+						</div>
 					</div>
 				</div>
+
 				<div class="posts-body">
 					<p class="posts-content"><%= post.content %></p>
 					<p>
