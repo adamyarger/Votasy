@@ -34,6 +34,30 @@ class PostsController < ApplicationController
 		@comments = Comment.where(post_id: @post)
 	end
 
+	def upvote
+		@post = Post.find(params[:id])
+
+		if @post.save
+			@post.upvote_by current_user
+			flash[:success] = "Upvoted"
+		else
+			flash[:error] = "Please Sign In"
+		end
+		redirect_to :back
+	end
+
+	def downvote
+		@post = Post.find(params[:id])
+
+		if @post.save
+			@post.downvote_by current_user
+			flash[:success] = "Downvoted"
+		else
+			flash[:error] = "Please Sign In"
+		end
+		redirect_to :back
+	end
+
 	private
 
 		def post_params

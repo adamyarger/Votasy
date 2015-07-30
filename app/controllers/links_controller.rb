@@ -20,6 +20,30 @@ class LinksController < ApplicationController
 		@link = Link.find(params[:id])
 	end
 
+	def upvote
+		@link = Link.find(params[:id])
+
+		if @post.save
+			@link.upvote_by current_user
+			flash[:success] = "Upvoted"
+		else
+			flash[:error] = "Please Sign In"
+		end
+		redirect_to :back
+	end
+
+	def downvote
+		@link = Link.find(params[:id])
+
+		if @link.save
+			@link.downvote_by current_user
+			flash[:success] = "Downvoted"
+		else
+			flash[:error] = "Please Sign In"
+		end
+		redirect_to :back
+	end
+
 	private
 
 		def link_params

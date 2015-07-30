@@ -3,6 +3,7 @@ class Post < ActiveRecord::Base
 	has_many :comments, as: :commentable
 	validates :user_id, :image, presence: true
 	acts_as_taggable
+	acts_as_votable
 
 	default_scope -> { order(created_at: :desc) }
 

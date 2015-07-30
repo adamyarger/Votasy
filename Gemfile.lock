@@ -38,6 +38,7 @@ GEM
       tzinfo (~> 1.1)
     acts-as-taggable-on (3.5.0)
       activerecord (>= 3.2, < 5)
+    acts_as_votable (0.10.0)
     arel (6.0.2)
     bcrypt (3.1.10)
     bourbon (4.2.3)
@@ -227,6 +228,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on (~> 3.4)
+  acts_as_votable (~> 0.10.0)
   bourbon
   capybara
   coffee-rails (~> 4.1.0)
