@@ -6,7 +6,6 @@ class UsersController < ApplicationController
 		@posts = @user.posts
 		@links = @user.links
 		@array = (@posts.to_a + @links.to_a).sort_by(&:created_at).paginate(:page => params[:page], :per_page => 20)
-		render 'static_pages/feed'
 	end
 
 	def following
