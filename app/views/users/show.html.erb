@@ -16,15 +16,19 @@
 				<ul>
 					<li>
 						<div class="right-stats"><%= @user.posts.count %></div>
-						<div class="small">Followers</div>
-					</li>
-					<li>
-						<div class="right-stats"><%= @user.following.count %></div>
-						<div class="small">Following</div>
-					</li>
-					<li>
-						<div class="right-stats"><%= @user.followers.count %></div>
 						<div class="small">Posts</div>
+					</li>
+					<li>
+						<%= link_to following_user_path do %>
+							<div class="right-stats"><%= @user.following.count %></div>
+							<div class="small">Following</div>
+						<% end %>
+					</li>
+					<li>
+						<%= link_to followers_user_path do %>
+							<div class="right-stats"><%= @user.followers.count %></div>
+							<div class="small">Followers</div>
+						<% end %>
 					</li>
 				</ul>
 			</div>
