@@ -38,20 +38,6 @@ describe PostsController, type: :controller do
     end
 	end
 
-	describe 'GET #show' do
-		it 'assigns the correct post' do
-			post = FactoryGirl.create :post
-			get :show, id: post
-			expect(assigns(:post)).to eq(post)
-		end
-
-		it 'renders the #show view' do
-			post = FactoryGirl.create :post
-			get :show, id: post
-			expect(response).to render_template :show
-		end
-	end
-
 end
 
 
