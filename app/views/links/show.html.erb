@@ -1,6 +1,5 @@
 <div class="bigbox">
 	<div class="box">
-		<div class="hover-tile-outer">
 			<div class="video">
 				<div class="video-wrapper">
 						<% if @link.html.present? %>
@@ -8,26 +7,6 @@
 		        <% end %>
 				</div>
 			</div>
-			<div class="hover-tile-container">
-				<div class="hover-tile hover-tile-visible"></div>
-				<div class="hover-tile hover-tile-hidden">
-					<p class="posts-like">
-						<div class="vote">
-							<% if current_user.voted_as_when_voted_for(@link) %>
-								<%= link_to dislike_link_path(@link), method: :put, class: 'down' do %>
-									<span><i class="fa fa-heart"></i></span>
-								<% end %>
-							<% else %>
-								<%= link_to like_link_path(@link), method: :put, class: 'up' do %>
-									<span><i class="fa fa-heart-o"></i></span>
-								<% end %>
-							<% end %>
-							<span><%= @link.get_upvotes.size %> likes</span>
-						</div>
-					</p>
-				</div>
-			</div>
-		</div>
 		<div class="posts-body">
 			<p class="posts-content"><%= @link.content %></p>
 			<p>
@@ -36,6 +15,17 @@
 					<%= @link.user.name %>
 					<p class="posts-tags"><%= raw @link.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
 				</span>
+				<div class="vote">
+					<% if current_user.voted_as_when_voted_for(@link) %>
+						<%= link_to dislike_post_path(@link), method: :put, class: 'down' do %>
+							<span><i class="fa fa-heart"></i></span>
+						<% end %>
+					<% else %>
+						<%= link_to like_post_path(@link), method: :put, class: 'up' do %>
+							<span><i class="fa fa-heart-o"></i></span>
+						<% end %>
+					<% end %>
+				</div>
 			</p>
 		</div>
 	</div>
