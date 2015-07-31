@@ -12,12 +12,12 @@
 # 			end
 
 # 			it 'creates the comment' do
-# 				post :create, { user_id: @user.id, post_id: @post, comment: @comment_attributes }
+# 				post :create, { user_id: @user.id,  comment: @comment_attributes }
 # 				expect(Comment.count).to eq(1)
 # 			end
 
 # 			it 'renders the comment' do
-# 				post :create, { user_id: @user.id, post_id: @post, comment: @comment_attributes }
+# 				post :create, { user_id: @user.id,  comment: @comment_attributes }
 # 				expect(response).to redirect_to @post
 # 			end
 # 		end
@@ -31,7 +31,7 @@
 # 			end
 
 # 			it 'does not create the post' do
-# 				post :create, { user_id: @user.id, post_id: @post, comment: @invalid_comment_attributes }
+# 				post :create, { user_id: @user.id,  comment: @invalid_comment_attributes }
 # 				expect(Comment.count).to eq(0)
 # 			end
 # 		end
