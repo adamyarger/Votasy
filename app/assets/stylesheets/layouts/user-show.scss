@@ -2,6 +2,7 @@
 	position: relative;
 	height: $intro-height-S;
 	margin-top: 0;
+  margin-bottom: 70px;
 	z-index: index($elements, posts);
 
 	a {
@@ -82,6 +83,25 @@
     top: 70px;
     margin-bottom: 70px;
     width: 100%;
+    text-align: center;
+
+    ul {
+	    margin: 0 auto;
+    	display: table;
+
+    	li {
+				list-style: none;
+				display: inline;
+				float: right;
+				padding-right: 1em;
+			}
+    }
+
+		.stacked-info {
+			li {
+				display: block;
+			}
+		}
 	}
 
 	.small {
@@ -90,6 +110,8 @@
 	}
 
 	@include MQ(M) {
+
+		margin-bottom: 0px;
 		/*.intro-user-avatar {
 
 			img {
