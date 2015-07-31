@@ -32,6 +32,17 @@
 					<%= link_to @post.user.name, user_path(@post.user) %>
 					<p class="posts-tags"><%= raw @post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
 				</span>
+				<div class="vote">
+					<% if current_user.voted_as_when_voted_for(@post) %>
+						<%= link_to dislike_post_path(@post), method: :put, class: 'down' do %>
+							<span><i class="fa fa-heart"></i></span>
+						<% end %>
+					<% else %>
+						<%= link_to like_post_path(@post), method: :put, class: 'up' do %>
+							<span><i class="fa fa-heart-o"></i></span>
+						<% end %>
+					<% end %>
+				</div>
 			</p>
 		</div>
 	</div>
