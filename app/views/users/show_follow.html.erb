@@ -1,11 +1,12 @@
 <div class="bigbox">
  	<div class="box">
  		<div class="follow-container">
+ 			<h1 class="follow-title"><%= @user.name + ' is ' + @title %></h1>
 	 		<ul>
 		    <% @users.each do |user| %>
 	    		<li>
 	    			<span class="avatar-small"><%= link_to image_tag(user.avatar.url(:thumb)), user %></span>
-	    			<span class="follow-name"><%= user.name %></span>
+	    			<span class="follow-name"><%= link_to user.name, user %></span>
 	    		</li>
 		    <% end %>
 		  </ul>

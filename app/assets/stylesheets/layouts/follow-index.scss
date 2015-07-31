@@ -16,10 +16,20 @@
     	border-bottom: none;
     }
 	}
+
+	a {
+		color: $color-3;
+	}
 }
 
 .follow-name {
 	position: relative;
   bottom: 22px;
   margin-left: 12px;
+}
+
+.follow-title {
+	font-size: 2em;
+  font-weight: bold;
+  padding: 40px 0px 25px 0;
 }
