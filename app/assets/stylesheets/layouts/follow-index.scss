@@ -1,0 +1,25 @@
+.follow-container {
+
+	ul {
+		float: left;
+		text-align: left;
+		width: 100%;
+	}
+
+	li {
+    padding: 12px 0px 8px 20px;
+    width: 90%;
+    margin-left: 5%;
+    border-bottom: 1px solid $border;
+
+    &:last-child {
+    	border-bottom: none;
+    }
+	}
+}
+
+.follow-name {
+	position: relative;
+  bottom: 22px;
+  margin-left: 12px;
+}
