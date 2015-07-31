@@ -1,7 +1,7 @@
 #intro {
 	position: relative;
 	height: $intro-height-S;
-	margin-top: $header-height-S;
+	margin-top: 0;
 	z-index: index($elements, posts);
 
 	a {

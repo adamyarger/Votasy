@@ -23,10 +23,6 @@ $success-color: #e6efc2 !default;
   }
 }
 
-#flash {
-  margin-top: 50px;
-}
-
 .flash-alert {
   @include flash($alert-color);
 }
