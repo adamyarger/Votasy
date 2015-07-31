@@ -78,7 +78,7 @@
 	}
 
 	.right-info {
-    background: red;
+    background: $white;
     position: absolute;
     top: 70px;
     margin-bottom: 70px;
@@ -87,13 +87,19 @@
 
     ul {
 	    margin: 0 auto;
-    	display: table;
+	    display: table;
+	    padding: 10px 0 10px 0px;
+	    color: $color-3;
 
     	li {
 				list-style: none;
 				display: inline;
 				float: right;
 				padding-right: 1em;
+			}
+
+			a {
+				color: $color-3;
 			}
     }
 
