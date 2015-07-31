@@ -2,6 +2,7 @@ class Link < ActiveRecord::Base
   belongs_to :user
   has_many :comments, as: :commentable
   validates :content, presence: true
+  validates :link, presence: true
   acts_as_votable
   acts_as_taggable
   default_scope -> { order(created_at: :desc) }
@@ -21,7 +22,7 @@ class Link < ActiveRecord::Base
     link_object.author_url        =  response_data[:author_url]
     link_object.provider_name     =  response_data[:provider_name]
     link_object.html              =  response_data[:html]
-    link_object.thumbnail_url		 =	response_data[:thumbnail_url]
+    link_object.thumbnail_url		  =	 response_data[:thumbnail_url]
     link_object.thumbnail_width   =  response_data[:thumbnail_width]
     link_object.thumbnail_height  =  response_data[:thumbnail_height]
     link_object.save
