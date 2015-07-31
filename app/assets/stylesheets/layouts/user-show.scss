@@ -104,47 +104,11 @@
 	}
 
 	@include MQ(M) {
-
 		margin-bottom: 0px;
-		/*.intro-user-avatar {
-
-			img {
-				width: 50px;
-				border-radius: 50%;
-				position: absolute;
-				top: 10px;
-	  		left: 15px;
-	  		border: 2px solid $white;
-			}
-		}*/
-
-		.intro-user-name {
-			color: $white;
-			padding-top: 9px;
-	  	@include font-size(18px);
-		}
 
 		.right-stats {
 			@include font-size(18px);
 			padding-bottom: 6px;
-		}
-
-		.left-info {
-			float: left;
-
-			ul {
-		    top: 16px;
-		    left: 80px;
-		    position: relative;
-			}
-
-			ul li {
-				list-style: none;
-				display: inline;
-				text-align: left;
-				padding-right: 1em; 
-				float: left;
-			}
 		}
 
 		.right-info {
@@ -166,19 +130,6 @@
 
 		    a {
 					color: $white;
-				}
-			}
-
-			ul li {
-				list-style: none;
-				display: inline;
-				float: right;
-				padding-right: 1em;
-			}
-
-			.stacked-info {
-				li {
-					display: block;
 				}
 			}
 		}
