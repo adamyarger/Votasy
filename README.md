@@ -1,5 +1,7 @@
 == Votasy
 
+live at: https://votasy.herokuapp.com/
+
 Votasy is a image/social bookmarking site where users can either submit their own images
 or submit a link from hundreds of different websites. Link submission supports both static images
 and rich media such as youtube or soundcloud embeds.
