@@ -128,12 +128,6 @@ Header
 
 
 .main-nav {
-	.arrow {
-		@include triangle(20px, $background, up);
-	  position: absolute;
-	  top: -9px;
-	  right: 40px;
-	}
 
 	ul {
 		z-index: index($elements, navigation);
@@ -145,7 +139,7 @@ Header
 		box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
 		width: 100%;
 		border-radius: 4px;
-		background: $background;
+		background: $white;
 		@include transform(translateY(-101%));
 
 		&.is-visible {
@@ -189,7 +183,8 @@ Header
 			width: 300px;
 			right: 50px;
 			position: fixed;
-			margin-top: 20px;
+			margin-top: 0px;
+			top: 3px;
 			@include transform(translateY(-131%));
 
 			&.is-visible {
