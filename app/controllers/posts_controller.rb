@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
 		if @post.save
 			flash[:success] = 'Successfully Posted!'
-			redirect_to @post
+			redirect_to root_path
 		else
 			flash[:error] = 'Something went wrong'
 			render :new

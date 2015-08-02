@@ -33,7 +33,7 @@ describe PostsController, type: :controller do
 
     	it 're-renders the new view' do
     		post :create, post: attributes_for(:post, image: nil)
-    		expect(response).to redirect_to root_path
+    		expect(response).to render_template :new
     	end
     end
 	end
