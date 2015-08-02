@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 			redirect_to @post
 		else
 			flash[:error] = 'Something went wrong'
-			redirect_to root_path
+			render :new
 		end
 	end
 
