@@ -20,6 +20,7 @@ gem 'acts_as_votable', '~> 0.10.0'
 gem 'rack-contrib'
 gem 'soulmate', :require => 'soulmate/server'
 gem 'redis'
+gem 'aws-sdk'
 
 
 # design
