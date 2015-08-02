@@ -8,3 +8,7 @@ development:
 
 test:
   <<: *defaults
+
+production:
+  <<: *defaults
+  domain: "http://votasy.herokuapp.com/"
