@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+	before_action :authenticate_user!
 	def feed
 		if user_signed_in?
 			@posts = current_user.feed_posts
