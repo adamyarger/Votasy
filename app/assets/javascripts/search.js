@@ -7,7 +7,7 @@ var ready = function(){
 
   select = function(term, data, type){
     // populate our search form with the autocomplete result
-    $('#search').val(term);
+    $('.search-bar').val(term);
    
     // hide our autocomplete results
     $('ul#soulmate').hide();

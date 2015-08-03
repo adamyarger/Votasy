@@ -7,11 +7,11 @@
   list-style: none;
   /* margin: 0 0 0 10px; */
   /* padding: 0; */
-  position: fixed;
+  position: absolute;
   text-shadow: 0 0 0 white;
   top: 50px;
-  left: 60px;
-  width: 579px;
+  left: 0px;
+  width: 100%;
   z-index: 1000;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -37,7 +37,7 @@
     float: right;
     list-style: none;
     padding: 5px 0;
-    width: 490px;
+    width: 70%;
     letter-spacing: 0.5px;
 }
  #soulmate .soulmate-suggestion {
@@ -75,6 +75,7 @@
     font-size: 11px;
     letter-spacing: 0.5px;
     margin-right: 490px;
+    width: 30%;
     padding: 10px 10px 0 10px;
     text-align: right;
     text-transform: capitalize;
