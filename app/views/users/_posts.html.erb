@@ -84,7 +84,7 @@
 	<% end %>
 </div>
 
-<%= will_paginate @array %>
+<%= will_paginate @array, :page_links => false, :next_label => 'Next', :previous_label => 'Prev' %>
 
 
 
