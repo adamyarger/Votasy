@@ -1,0 +1,23 @@
+.pagination {
+	padding: 50px;
+  text-align: center;
+}
+
+.previous_page,.next_page {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background: lighten($dark-blue, 55%);
+  border-radius: 3px;
+  border: 1px solid $dark-blue;
+  color: $dark-blue;
+  outline: none;
+  padding: 0.5em 0.9em;
+  text-decoration: none;
+  margin-left: 6px;
+  margin-right: 6px;
+
+  &:hover {
+    background: $white;
+  }
+}
