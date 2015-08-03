@@ -94,16 +94,27 @@ Header
 		}
 	}
 
-  .nav-bell {
-	  width: 50px;
+	.nav-bell-background {
+		width: 50px;
 	  height: 100%;
-	  background: url("bell.svg") no-repeat center center;
+	  position: absolute;
+		background: $background;
+		right: 0;
+    top: 0;
+	}
+
+  .nav-bell {
+	  width: 30px;
+	  height: 100%;
+	  -webkit-mask-image: url(bell.svg);
+	  -webkit-mask-repeat: no-repeat;
+    mask-image: url(bell.svg);
 	  background-size: 22px 22px;
-	  background-color: $background;
+	  background-color: $dark-blue;
 	  cursor: pointer;
 	  position: absolute;
-	  right: 0;
-	  top: 0;
+	  right: 10px;
+	  top: 10px;
   }
 
   .nav-name {
