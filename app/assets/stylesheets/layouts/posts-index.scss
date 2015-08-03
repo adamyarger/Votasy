@@ -30,6 +30,7 @@
     @include font-size(13px);
     color: darken($border, 35%);
     margin-bottom: 12px;
+    line-height: 1.4em;
   }
 
   .posts-name {
