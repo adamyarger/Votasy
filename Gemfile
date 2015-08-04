@@ -21,6 +21,7 @@ gem 'rack-contrib'
 gem 'soulmate', :require => 'soulmate/server'
 gem 'redis'
 gem 'aws-sdk'
+gem "figaro"
 
 
 # design
